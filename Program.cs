@@ -28,6 +28,7 @@ int F(int A, int B)
     9012 -> 12
 */
 
+/*
 Console.Write("Введите число ");
 int x = int.Parse(Console.ReadLine());
 Console.WriteLine($"сумма цифр числа {x} = {Sum(x)}");
@@ -41,4 +42,37 @@ int Sum(int n)
         n /= 10;
     }
     return s;     
+}
+*/
+
+
+/*
+Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+    1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+    6, 1, 33 -> [6, 1, 33]
+*/
+
+// я тут не очень поняла условие в соответствии с примерами: массив любой длины или из 8 элементов? 
+// делаю произвольной длины для универсального случая
+
+int d = new Random().Next(5,20);
+int[] m = new int[d]; 
+Console.WriteLine($"Массив из {d} элементов:");
+input_mas(m);
+print_mas(m);
+
+void input_mas(int[] mas)
+{
+    int n = mas.Length;
+    Random rnd = new Random();
+    for(int i=0; i<n; i++)
+        mas[i] = rnd.Next(1,100);
+}
+
+void print_mas(int[] mas)
+{
+    int n = mas.Length;
+    for (int i=0; i<n; i++)
+        Console.Write(mas[i] + " ");
+     Console.WriteLine();   
 }
